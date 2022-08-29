@@ -33,7 +33,7 @@ jobs:
       - name: Run styles lint and format check
         run: npm run lint:css
   deploy:
-    needs: [build test]
+    needs: [build, test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
